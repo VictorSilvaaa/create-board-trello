@@ -8994,6 +8994,11 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
+react-checkbox-group@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/react-checkbox-group/-/react-checkbox-group-5.0.2.tgz#ccf6d5bd36d549727f8bc2c44b011224e4599450"
+  integrity sha512-iNnKCwVNNlsj6DXIzPO9qx5BcwPf3lXV0u8UW6YcsVDwlS2AC+bJXq76z2uwbtWZbCIZHzm2mxMMj4Bzm3B+lw==
+
 react-dev-utils@^11.0.2:
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.2.tgz#98aed16ef50f808ee17b32def75eb15f89655802"
