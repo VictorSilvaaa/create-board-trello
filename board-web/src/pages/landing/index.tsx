@@ -16,7 +16,7 @@ import Textarea from '../../components/textarea'
 import Select from '../../components/Select'
 
 
-const Landing = ():ReactElement  => {
+const Landing = ():ReactElement => {
 
     //abreviação url
     const url =`?key=${process.env.REACT_APP_TRELLO_KEY}&token=${process.env.REACT_APP_TRELLO_TOKEN}`
@@ -26,13 +26,17 @@ const Landing = ():ReactElement  => {
     const [email, setEmail] = useState('');
     const [description, setDescription] = useState('');
     const [cor, setCor] = useState('');
-    const [skills, setskills] = useState('');
+
+    //dices of board
+    let idCard = '';
     
 
 
     async function initCreate(e:FormEvent) {
       e.preventDefault();
-      await createCard();
+
+      await createLabels()
+     
     }
       //function create a board
       async function createBoard() {    
@@ -47,13 +51,24 @@ const Landing = ():ReactElement  => {
         
         return responseCreateList.data.id;
       }
-
+     
       //create card on list of board
       async function createCard() {
         let idList = await createList();
-        const responseCreateCard = await api.post(`cards${url}&idList=${idList}&name=MeusDados&desc=${description}`); 
-        
+        const responseCreateCard = await api.post(`cards${url}&idList=${idList}&name=MeusDados&desc=${description}`);
+      
+        return responseCreateCard.data.id;
       }
+
+      //create label on card
+      async function createLabels(){
+        let idCard= await createCard();
+
+        const responseCreateLabelEmail = await api.post(`cards/${idCard}/labels${url}&color=${cor}&name=${email}`);
+      }
+
+      
+    
 
     return(
       <div className="Landing">
@@ -91,9 +106,9 @@ const Landing = ():ReactElement  => {
                
                 <div className="checkboxs">
                     <Checkbox
-                        name='option1'
+                        name='+18'
                         label='Opção 1'
-                        value={name}
+                        value='+18'
                         onChange={(e) => {setName(e.target.value)}}>
                     </Checkbox>
                     <Checkbox
@@ -129,6 +144,7 @@ const Landing = ():ReactElement  => {
                  <input 
                     type="radio" 
                     id="web" 
+              
                     placeholder='web' 
                  />
                  <input 
