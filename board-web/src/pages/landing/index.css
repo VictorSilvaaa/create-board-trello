@@ -98,7 +98,7 @@ header {
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     
 }
 
@@ -107,6 +107,8 @@ header {
     width: 80px;
     height: 30px;
     display: inline-block;
+
+    margin: 5px;
     
 }
 
