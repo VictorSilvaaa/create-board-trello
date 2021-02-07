@@ -7,9 +7,9 @@ formulário integrado a API TRELLO para criar um cartão num board com os dados 
 
 Instalação:
 
-1. Entre na pasta web-trello
+1. Entre na pasta board-web
 
-`cd web-trello`
+`cd board-web`
 
 2. rode no terminal
 
