@@ -13,4 +13,6 @@ textarea{
     height: 6rem;
     background:#FAFAFC;
     border-color: #029ef8;
+
+    padding: 8px;
 }
