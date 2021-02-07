@@ -1,0 +1,16 @@
+.textarea-block {
+    position: relative;
+    margin: 0 0 5px;
+    width: 100%;
+    
+    outline-color: #2D9CDB;
+
+    border-radius: 4px;
+    
+}
+
+textarea{
+    height: 6rem;
+    background:#FAFAFC;
+    border-color: #029ef8;
+}
