@@ -11,8 +11,11 @@ const RandomScreen: React.FC<randomScreenProps> = (props) => {
   return (
     <div className="random-screen">
       <div className="container">
-        <img src={props.img} alt={props.text}></img>
+        <div id="sucess">
+        <img src={props.img} width='200px' alt={props.text}></img>
+        </div>
         <p>{props.text}</p>
+       
       </div>
     </div>
   )

@@ -79,7 +79,7 @@ header {
 .checkboxs{
     width: 100%;
     margin-bottom: 2.5rem;
-    padding: 0 20%;
+    padding: 0 10%;
     
 
     display: flex;
@@ -92,25 +92,26 @@ header {
 
 /* Skills ================== */
 .skills {
-    margin-top: 1rem;
+    padding: 2rem;
     padding: 0 31%;
     width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
-input[type=radio]{
 
+.skills input[type=checkbox]{
     width: 80px;
     height: 30px;
     display: inline-block;
-   
     
 }
-input[type=radio]::after{
-    content: attr(placeholder);
+
+.skills input[type=checkbox]::after{
+    content: attr(value);
 
     border: 1px solid #2D2747;
     background-color: #FAFAFC;
@@ -126,7 +127,7 @@ input[type=radio]::after{
    
 
 }
-input[type=radio]:checked::after{
+.skills input[type=checkbox]:checked::after{
     background-color: #56CCF2;
 }
 
@@ -184,4 +185,9 @@ footer button{
     .Landing main{
         width: 90%;
     }
+}
+
+hr{
+    background-color: black;
+    width: 85%;
 }
